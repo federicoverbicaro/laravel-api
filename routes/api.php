@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/portfolio', [WalletController::class,'index']);
+
+Route::get('/portfolio/{slug}', [WalletController::class,'show']);
