@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LedController;
 use App\Http\Controllers\Api\WalletController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/portfolio', [WalletController::class,'index']);
 
 Route::get('/portfolio/{slug}', [WalletController::class,'show']);
+
+Route::post('/contacts', [LedController::class, 'store']);
